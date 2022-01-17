@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .slider-wrap {
+        width: 100%;
+        outline: 1px solid red;
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        width: 400%;
+        display: flex;
+        transition: all 1s;
+      }
+
+      li {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        /* display: none; */
+      }
+
+      .slider-points {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+        /* border: 1px solid green; */
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        z-index: 999;
+      }
+
+      .slider-points li {
+        width: 80px;
+        height: 15px;
+        border: 2px solid white;
+      }
+
+      .arrows {
+        height: 100vh;
+        width: 100%;
+        padding: 0 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        outline: 5px solid red;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .arrows i {
+        font-size: 50px;
+        color: white;
+        /* border: 1px solid yellow; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-wrap">
+      <ul class="slider-imgs">
+        <li><img src="./imgs/slide1.jpg" alt="" /></li>
+        <li><img src="./imgs/slide2.jpg" alt="" /></li>
+        <li><img src="./imgs/slide3.jpg" alt="" /></li>
+        <li><img src="./imgs/slide4.jpg" alt="" /></li>
+      </ul>
+      <ul class="slider-points">
+        <li class="mx-3"></li>
+        <li class="mx-3"></li>
+        <li class="mx-3"></li>
+        <li class="mx-3"></li>
+      </ul>
+      <div class="arrows">
+        <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-arrow-right"></i>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/be60f897cf.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+  
+      //
+      $(".slider-points")
+        .children()
+        .click(function () {
+          let index = $(this).index();
+          let change = -index * 100 + "%";
+          console.log(change);
+          $(this)
+            .css("background-color", "white")
+            .siblings()
+            .css("background-color", "");
+          $(".slider-imgs").css("margin-left", change);
+        });
+
+        let page = 0;
+        $(".fa-arrow-right").click(function(){
+            if(page < 3){
+            page++;
+            let change = page * -100 + "%";
+            $(".slider-imgs").css("margin-left", change);
+            console.log(page);
+            $(".slider-points").children().eq(page).css("background-color", "white").siblings()
+            .css("background-color", "rgba(0,0,0,0)");
+        };
+        })
+
+        $(".fa-arrow-left").click(function(){
+            if(page > 0){
+            page--;
+            let change = page * -100 + "%";
+            $(".slider-imgs").css("margin-left", change);
+            $(".slider-points").children().eq(page).css("background-color", "white").siblings()
+            .css("background-color", "rgba(0,0,0,0)");
+            }
+        })
+
+     
+
+
+    //     for(let i=0;i<$(".slider-points li").length;i++){
+    //         setInterval(() => {
+    //         const moveX = i * -100+"%";
+    //         $(".slider-imgs").css("margin-left", moveX);
+    //     }, 1000);
+    //     i++;
+    //    };
+
+        
+    
+    </script>
+  </body>
+</html>
