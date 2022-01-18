@@ -123,30 +123,37 @@
       crossorigin="anonymous"
     ></script>
     <script>
-  
-      //
+      let liindex = 0;
+      
       $(".slider-points")
         .children()
         .click(function () {
-          let index = $(this).index();
-          let change = -index * 100 + "%";
-          console.log(change);
+          liindex = $(this).index();
+          let change = -liindex * 100 + "%";
+          // console.log(change);
           $(this)
             .css("background-color", "white")
             .siblings()
             .css("background-color", "");
           $(".slider-imgs").css("margin-left", change);
+          // getliindex(index);
         });
 
-        let page = 0;
+        // console.log(liindex);
+
+        // function getliindex(index){
+        // return index;
+        // }
+
+        let page = liindex;
         $(".fa-arrow-right").click(function(){
             if(page < 3){
             page++;
             let change = page * -100 + "%";
             $(".slider-imgs").css("margin-left", change);
-            console.log(page);
             $(".slider-points").children().eq(page).css("background-color", "white").siblings()
             .css("background-color", "rgba(0,0,0,0)");
+            console.log(page);
         };
         })
 
