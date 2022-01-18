@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <style>
+        #color-demo-area {
+            width: 100%;
+            height: 600px;
+            background-color: lightslategray;
+        }
+
+        #color-select-area {
+            width: 100%;
+            height: 600px;
+            background-color: #eee;
+        }
+
+        .circle-color {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: maroon;
+        }
+
+        /* .circle-color:first-child {
+            background-color: hsl(0, 79%, 72%);
+        } 
+
+        .circle-color:last-child {
+            background-color: hsl(203, 92%, 75%);
+        } */
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="color-demo-area" class="col-md-6"></div>
+            <div id="color-select-area" class="col-md-6 d-flex flex-wrap align-content-start">
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        let str = `<div class="circle-color m-2"></div>`;
+        for(let i=0; i<=20; i++){
+            $("#color-select-area").append(str).children().eq(i).css("background-color",`hsl(${i}10, 79%, 72%)`);
+        }
+
+        $(".circle-color").click(function(){
+            $("#color-demo-area").css("background-color",$(this).css("background-color"));
+        })
+
+
+
+
+    </script>
+</body>
+</html>
