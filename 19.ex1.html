@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <table class="table table-bordered">
+          <tr>
+            <td><input type="checkbox" class="ischange"></td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="ischange" ></td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="ischange"></td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="ischange" ></td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+          </tr>
+        </table>
+        <div class="wrap">
+      </div>
+      </div>
+    
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
+    <script>
+    $(".ischange").click(function() {
+        const checked = $(".ischange:checked").val();
+        if(checked == undefined){
+            $(this).closest("tr").css("background-color","white");
+       }else {
+        $(this).closest("tr").css("background-color","gray");
+       }
+    }); 
+
+
+
+
+   
+            
+
+
+
+
+    </script>
+</body>
+</html>

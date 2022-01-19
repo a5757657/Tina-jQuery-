@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: lightgoldenrodyellow;
+            transition: .5s;
+        }
+
+        .blue {
+            background-color: lightsteelblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <button class="addClass">addClass</button>
+    <button class="removeClass">removeClass</button>
+    <button class="toggleClass">toggleClass</button>
+
+    <div class="box"></div>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        $(".addClass").click(function(){
+            $(".box").addClass("blue");
+        })
+
+        $(".removeClass").click(function(){
+            $(".box").removeClass("blue");
+        })
+
+        $(".toggleClass").click(function(){
+            $(".box").toggleClass("blue");
+        })
+
+
+    </script>
+</body>
+</html>

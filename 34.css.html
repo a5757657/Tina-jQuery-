@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./bootstrap-4.6.1-dist/css/bootstrap.min.css"
+    />
+    <style>
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: #afa;
+      }
+
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">box</div>
+    <button id="click1">click</button>
+
+    <div class="box2">box</div>
+    <button id="click2">click</button>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        console.log($(".box").css("background-color"));
+
+        var style = {
+          color: "#fff",
+          background: "#000",
+        };
+
+        console.log($(".box").css("color"));
+
+        var style2 = {
+          color: "black",
+          background: "#afa",
+        };
+
+        // $("button").click(function () {
+        //     if($(".box1").css("color") == "rgb(33, 37, 41)"){
+        //   $(".box1").css(style);
+        //     }else {
+        //     $(".box1").css(style2);
+        //     }
+        // });
+
+
+        function getColor() {
+            return $(".box1").css("background-color");
+        };
+
+        $("#click2").click(function () {
+            $(".box2").css("background-color",getColor());
+        });
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

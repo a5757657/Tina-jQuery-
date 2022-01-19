@@ -1,69 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="./bootstrap-4.6.1-dist/css/bootstrap.min.css"
+    />
     <style>
-        .small {
-            font-size: .5rem;
-        }
+      .small {
+        font-size: 0.5rem;
+      }
 
-        .medium {
-            font-size: 1rem;
-        }
+      .medium {
+        font-size: 1rem;
+      }
 
-        .large {
-            font-size: 1.5rem;
-        }
-
-
-
+      .large {
+        font-size: 1.5rem;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-            <div class="btn-group d-flex justify-content-end" role="group" aria-label="Basic example">
-                <button id="s" type="button" class="btn btn-info">S</button>
-                <button id="m" type="button" class="btn btn-info">M</button>
-                <button id="l" type="button" class="btn btn-info">L</button>
-            </div>
-            <h1 class="mt-5">jQuery</h1>
-            <p class="mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel fugiat provident animi, aliquid quaerat enim tempora vitae magnam cum consequuntur sunt quod a impedit. Ut, commodi numquam cumque deserunt adipisci rerum. Eius quos obcaecati vitae laborum accusantium alias repellendus adipisci. Quae rerum quam tempore placeat quisquam ab. Nemo tempore quis exercitationem, optio officiis, dicta cum ipsum omnis voluptatum provident consectetur hic quisquam vero saepe. Veniam voluptas quos possimus nesciunt deleniti porro odit quibusdam nulla fugiat esse facilis quas eveniet similique, velit assumenda perferendis natus modi quam, sunt tenetur eaque! Tenetur recusandae doloremque pariatur. Iste esse quae nostrum odio, magnam maiores.</p>
+      <div
+        class="btn-group d-flex justify-content-end"
+        role="group"
+        aria-label="Basic example"
+      >
+        <button id="s" type="button" class="btn btn-info">S</button>
+        <button id="m" type="button" class="btn btn-info">M</button>
+        <button id="l" type="button" class="btn btn-info">L</button>
+      </div>
+      <h1 class="mt-5">jQuery</h1>
+      <p class="mt-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel fugiat
+        provident animi, aliquid quaerat enim tempora vitae magnam cum
+        consequuntur sunt quod a impedit. Ut, commodi numquam cumque deserunt
+        adipisci rerum. Eius quos obcaecati vitae laborum accusantium alias
+        repellendus adipisci. Quae rerum quam tempore placeat quisquam ab. Nemo
+        tempore quis exercitationem, optio officiis, dicta cum ipsum omnis
+        voluptatum provident consectetur hic quisquam vero saepe. Veniam
+        voluptas quos possimus nesciunt deleniti porro odit quibusdam nulla
+        fugiat esse facilis quas eveniet similique, velit assumenda perferendis
+        natus modi quam, sunt tenetur eaque! Tenetur recusandae doloremque
+        pariatur. Iste esse quae nostrum odio, magnam maiores.
+      </p>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel fugiat provident animi, aliquid quaerat enim tempora vitae magnam cum consequuntur sunt quod a impedit. Ut, commodi numquam cumque deserunt adipisci rerum. Eius quos obcaecati vitae laborum accusantium alias repellendus adipisci. Quae rerum quam tempore placeat quisquam ab. Nemo tempore quis exercitationem, optio officiis, dicta cum ipsum omnis voluptatum provident consectetur hic quisquam vero saepe. Veniam voluptas quos possimus nesciunt deleniti porro odit quibusdam nulla fugiat esse facilis quas eveniet similique, velit assumenda perferendis natus modi quam, sunt tenetur eaque! Tenetur recusandae doloremque pariatur. Iste esse quae nostrum odio, magnam maiores.</p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel fugiat
+        provident animi, aliquid quaerat enim tempora vitae magnam cum
+        consequuntur sunt quod a impedit. Ut, commodi numquam cumque deserunt
+        adipisci rerum. Eius quos obcaecati vitae laborum accusantium alias
+        repellendus adipisci. Quae rerum quam tempore placeat quisquam ab. Nemo
+        tempore quis exercitationem, optio officiis, dicta cum ipsum omnis
+        voluptatum provident consectetur hic quisquam vero saepe. Veniam
+        voluptas quos possimus nesciunt deleniti porro odit quibusdam nulla
+        fugiat esse facilis quas eveniet similique, velit assumenda perferendis
+        natus modi quam, sunt tenetur eaque! Tenetur recusandae doloremque
+        pariatur. Iste esse quae nostrum odio, magnam maiores.
+      </p>
     </div>
-    
+
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
     <script>
-        $("#s").click(function(){
-            if($("p").hasClass("medium") || $("p").hasClass("large")){
-                $("p").removeClass("medium");
-                $("p").removeClass("large");
-            }
-            $("p").addClass("small");
-        })
+      //陽春寫法
+      // $("#s").click(function(){
+      //     if($("p").hasClass("medium") || $("p").hasClass("large")){
+      //         $("p").removeClass("medium");
+      //         $("p").removeClass("large");
+      //     }
+      //     $("p").addClass("small");
+      // })
 
-        $("#m").click(function(){
-            if($("p").hasClass("small") || $("p").hasClass("large")){
-                $("p").removeClass("small");
-                $("p").removeClass("large");
-            }
-            $("p").addClass("medium");
-        })
+      // $("#m").click(function(){
+      //     if($("p").hasClass("small") || $("p").hasClass("large")){
+      //         $("p").removeClass("small");
+      //         $("p").removeClass("large");
+      //     }
+      //     $("p").addClass("medium");
+      // })
 
-        $("#l").click(function(){
-            if($("p").hasClass("small") || $("p").hasClass("medium")){
-                $("p").removeClass("small");
-                $("p").removeClass("medium");
-            }
-            $("p").addClass("large");
-        })
+      // $("#l").click(function(){
+      //     if($("p").hasClass("small") || $("p").hasClass("medium")){
+      //         $("p").removeClass("small");
+      //         $("p").removeClass("medium");
+      //     }
+      //     $("p").addClass("large");
+      // })
 
-
+      $("button").click(function () {
+        if ($(this).is(':contains("S")')) {
+          $("p").removeClass().addClass("small");
+        }
+        if ($(this).is(':contains("M")')) {
+            $("p").removeClass().addClass("medium");
+        }
+        if ($(this).is(':contains("L")')) {
+        $("p").removeClass().addClass("large");
+        }
+      });
     </script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <style>
+        .block {
+            width: 100%;
+            height: 1000px;
+            outline: 1px solid lightslategray;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: navajowhite;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .leave {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="block my-5"></div>
+    <div class="box"></div>
+    <div class="block mt-5"></div>
+    
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        console.log($(".box").offset());
+        console.log($(".box").offset().top);
+        console.log($(".box").offset().left);
+
+        $(window).scroll(function(){
+            console.log($(window).scrollTop());
+            // if($("window").scrollTop() >= ($(".box").offset().top - $(window).height()/2)){
+            if($(window).scrollTop() >= ($(".box").offset().top - $(window).height()/2)){
+                $(".box").addClass("leave");
+            }else {
+                $(".box").removeClass("leave");
+            }
+        })
+    </script>
+</body>
+</html>

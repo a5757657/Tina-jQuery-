@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="form-row">
+                <select name="city" id="city">
+                    <option value="0">基隆</option>
+                    <option value="1">台北</option>
+                    <option value="2">新北</option>
+                </select>
+
+                <select name="district" id="district">
+                    <option value="0">七堵區</option>
+                    <option value="1">中正區</option>
+                    <option value="2">暖暖區</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        let districtArray = [
+       ['七堵', '中正', '暖暖'],
+       ['中正', '大安', '信義'],
+       ['蘆洲', '三重', '新店'],
+     ];
+
+    //   $("#city").change(function(){
+    //      const cityval = $(this).val();
+    //      for(let i=0; i < 3 ; i++){
+    //          $("#district").children().eq(i).text(districtArray[cityval][i])
+    //      }
+    //   });
+
+      $("#city").change(function(){
+        const cityval = $(this).val();
+        $("#district option").each(function(index , value){
+            $(value).text(districtArray[cityval][index]);
+        })
+      });
+
+    //   console.log($("#district option").val())
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Click</h1>
+    <div class="box"></div>
+    
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        $(".box").on({
+            click: function(){
+                $("h1").text("click");
+            },
+            mouseover: function(){
+                $("h1").text("hover");
+            },
+            dblclick: function(){
+                $("h1").text("dbclick");
+            }
+        });
+
+
+
+    </script>
+</body>
+</html>

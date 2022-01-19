@@ -43,6 +43,7 @@
         <div class="row">
             <div id="color-demo-area" class="col-md-6"></div>
             <div id="color-select-area" class="col-md-6 d-flex flex-wrap align-content-start">
+                <div class="circle-color"></div>
             </div>
         </div>
     </div>
@@ -50,13 +51,18 @@
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
     <script>
-        let str = `<div class="circle-color m-2"></div>`;
-        for(let i=0; i<=20; i++){
-            $("#color-select-area").append(str).children().eq(i).css("background-color",`hsl(${i}10, 79%, 72%)`);
-        }
+        // let str = `<div class="circle-color m-2"></div>`;
+        // for(let i=0; i<=20; i++){
+        //     $("#color-select-area").append(str).children().eq(i).css("background-color",`hsl(${i}10, 79%, 72%)`);
+        // }
 
-        $(".circle-color").click(function(){
-            $("#color-demo-area").css("background-color",$(this).css("background-color"));
+        // $(".circle-color").click(function(){
+        //     $("#color-demo-area").css("background-color",$(this).css("background-color"));
+        // })
+
+        const circle = document.querySelectorAll(".circle-color");
+        circle.addEventListener("click",function(){
+            
         })
 
 
