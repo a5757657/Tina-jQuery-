@@ -137,7 +137,9 @@
             .css("background-color", "");
           $(".slider-imgs").css("margin-left", change);
           // getliindex(index);
+          console.log("liindex",liindex);
         });
+
 
         // console.log(liindex);
 
@@ -147,13 +149,14 @@
 
         let page = liindex;
         $(".fa-arrow-right").click(function(){
+            console.log("page",page);
             if(page < 3){
             page++;
             let change = page * -100 + "%";
             $(".slider-imgs").css("margin-left", change);
             $(".slider-points").children().eq(page).css("background-color", "white").siblings()
             .css("background-color", "rgba(0,0,0,0)");
-            console.log(page);
+            // console.log(page);
         };
         })
 
@@ -169,14 +172,12 @@
 
      
 
+          //計時器
+            setInterval(()=> {
 
-    //     for(let i=0;i<$(".slider-points li").length;i++){
-    //         setInterval(() => {
-    //         const moveX = i * -100+"%";
-    //         $(".slider-imgs").css("margin-left", moveX);
-    //     }, 1000);
-    //     i++;
-    //    };
+            // $(".slider-imgs").css("margin-left", "-="+ $(".slider-imgs li").width());
+
+           },2000);
 
         
     
